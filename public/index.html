@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- Declares angularMapApp as the starting Angular module -->
+<html class="no-js" ng-app="timeLineApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Time Line App</title>
+        <meta name="description" content="Show histrocal people on a hist time line">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="style.css"/>
+        <!-- Holder JS -->
+        <script src="../bower_components/holderjs/holder.js"></script>
+        <!-- Modernizr -->
+        <script src="../bower_components/modernizr/bin/modernizr"></script>
+        <!-- ui-bootstrap -->
+
+        <!-- JS Source -->
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-route/angular-route.js"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <!-- Angular Script -->
+        <script src="js/app.js"></script>
+        <script src="js/findinfo.js"></script>
+        <script src="js/timeline.js"></script>
+        <script src="js/wikisearch.js"></script>
+    </head>
+    <body ng-controller="timeLineController">
+        <div class="container">
+            <h1 class="mainTitle">World History Time Line</h1>
+
+            <div class="container">
+              <input type="text" ng-model="title" placeholder="Enter a name" typeahead="name for name in wikiSearch($viewValue)" class="title form-control">
+              <div class="search btn btn-default" ng-click="addPerson()">Search</div>
+            </div>
+            <div class="main">
+              <div class="zoom">
+                <div class="btn btn-default" ng-click="zoom(110)">+</div>
+                <div class="btn btn-default" ng-click="zoom(11)">-</div>
+              </div>
+
+              <div class="mainBox">
+                <div id="legend">
+                  <div id="legendTop"><p>Birth Year</p></div>
+                  <div id="legendMid"><p>Years</p></div>
+                  <div id="legendDown"><p>Death Year</p></div>
+                </div>
+                <div id="content">
+                    <div id="timeLineContainer" timeline></div>
+                </div>
+              </div>
+              
+
+            </div>
+             <hr/>
+            <!-- Footer -->
+
+        </div>
+        
+    </body>
+
+</html>
