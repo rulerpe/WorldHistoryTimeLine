@@ -1,0 +1,18 @@
+<div class="mRow row" ng-repeat ="year in mainLine ">
+	<div class="mBorn col-xs-4" ng-class="$index%2 === 0 ? 'mRowColor': ''">
+		<div class="mPerson" ng-repeat = "person in year.born">
+			<img src="{{person.img}}" alt="">
+			<p>{{person.name}} {{person.born}}</p>
+		</div>
+	</div>
+	<div class="mEvent col-xs-4" ng-class="$index%2 === 0 ? 'mRowColor': ''" >
+		<div class="mYear">Year {{year.year}}</div>
+		<p ng-show="year.event.name">{{year.event.name}} ({{year.event.year}})</p>
+	</div>
+	<div class="mDie col-xs-4" ng-class="$index%2 === 0 ? 'mRowColor': ''">
+		<div class="mPerson" ng-repeat = "person in year.die">
+			<img src="{{person.img}}" alt="">
+			<p>{{person.name}} {{person.die}} ({{person.die-person.born}})</p>
+		</div>
+	</div>
+</div>

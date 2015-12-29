@@ -1,5 +1,6 @@
 var app = angular.module('timeLineApp',['ui.bootstrap']);
-app.controller('timeLineController', function($scope, $http,wikisearch,findinfo){
+app.controller('timeLineController', function($scope, $http,wikisearch,findinfo, $window){
+    $scope.windowWidth = $window.innerWidth;
 	$scope.title = undefined;
     $scope.wikiSearch = wikisearch.findName;
     $scope.findInfo =  findinfo;

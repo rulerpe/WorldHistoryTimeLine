@@ -146,3 +146,16 @@ img {
         font-size: 0.9em;
     }
 } 
+
+.mRowColor {
+    background-color: #D3D3D3;
+}
+.mBorn, .mEvent, .mDie {
+    height: 170px;
+}
+.fix{
+    position: fixed;
+    z-index: 100;
+    bottom: 0px;
+    right: 0px;
+}

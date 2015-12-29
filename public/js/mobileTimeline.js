@@ -1,11 +1,11 @@
 angular.module('timeLineApp')
-  .directive('timeline', function (findinfo) {
+  .directive('mobiletimeline', function (findinfo) {
     return {
-      templateUrl: 'js/timeline.html',
+      templateUrl: 'js/mobileTimeLine.html',
       restrict: 'EA',
       controller: function ($scope, $attrs, findinfo) {
       	$scope.mainLine = findinfo.mainLine;
-      	console.log("big")
+      	console.log("small")
       }
     };
   });
