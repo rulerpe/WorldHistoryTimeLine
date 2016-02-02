@@ -94,9 +94,7 @@ angular.module('timeLineApp')
       var result = {born:"", die:""};
       var birthStr =contentStr.match(/birth_date.*?\n/g)[0];
       var deathStr =contentStr.match(/death_date.*?\n/g)? contentStr.match(/death_date.*?\n/g)[0]:"";
-      console.log(birthStr,deathStr)
       if(birthStr.match(/\d+\|\d+\|\d+/g)){
-        //console.log(deathStr.match(/\d+\|\d+\|\d+/g));
         result.born = birthStr.match(/\d+\|\d+\|\d+/g)[0].split("|")[0];
       }else if(birthStr.match(/\d+\s\w+\s\d+/g)){
         result.born = birthStr.match(/\d+\s\w+\s\d+/g)[0].split(" ")[2];

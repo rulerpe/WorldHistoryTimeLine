@@ -1,25 +1,35 @@
 
+body {
+
+    background-color: #D8DBE2;
+    color: #1B1B1E;
+}
+
 .mainBox{
     position: relative;
     width: 100%;
     height: 640px;
     margin-top: 10px;
+
+    background-color: #A9BCD0;
 }
 #legend {
     float: left;
     width: 6%;
     height: 100%;
     display: block;
+    background-color: #58A4B0;
 
 }
 
 #content {
     float: left;
-    width: 93%;
+    width: 94%;
     height: 100%;
     overflow: scroll;
     overflow-y:hidden;
     display: block;
+    cursor: pointer;
 }
 
 #timeLineContainer {
@@ -63,6 +73,9 @@
 
 .container{
     text-align: center;
+    width:100%;
+    height: 100%;
+    padding: 0;
 }
 
 .title {
@@ -78,23 +91,23 @@
     text-align: center;
 }
 .main {
-    width: 95%;
-    margin: 10px auto 0 auto;
+    width: 100%;
+    margin-top: 10px;
 }
 
 
 .slots {
     height: 100%;
-    width: 9%;
-    border-left: 1px solid #c9c9c9;
+    width: 9.091%;
+    border-left: 1px solid #457B9D;
     display: inline-block;
     font-size: 0.8em;
 }
 .zoomIn{
-    width:0.9%;
+    width:0.9091%;
 }
 .zoomOut{
-    width:9%;
+    width:9.091%;
 }
 
 .slots div {
@@ -104,9 +117,10 @@
 .born {
     height: 40%;
     overflow: hidden;
+    padding: 5px;
 }
 .event {
-    background-color: #9fa8a3;
+    background-color: #D8DBE2;
     border-bottom: 1px solid #1d2120;
     height: 20%;
     position: relative;
@@ -120,6 +134,8 @@
 .die {
     height: 40%;
     overflow: hidden;
+    
+    padding: 5px;
 }
 img {
     display: block;
@@ -127,6 +143,7 @@ img {
     margin-right: auto
 }
 .die img {
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
 .person {

@@ -3,9 +3,9 @@ angular.module('timeLineApp')
     return {
       templateUrl: 'js/timeline.html',
       restrict: 'EA',
+      transclude: true,
       controller: function ($scope, $attrs, findinfo) {
       	$scope.mainLine = findinfo.mainLine;
-      	console.log("big")
       }
     };
   });

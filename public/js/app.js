@@ -1,9 +1,11 @@
-var app = angular.module('timeLineApp',['ui.bootstrap']);
+var app = angular.module('timeLineApp',['ui.bootstrap','ng-drag-scroll']);
 app.controller('timeLineController', function($scope, $http,wikisearch,findinfo, $window){
     $scope.windowWidth = $window.innerWidth;
 	$scope.title = undefined;
     $scope.wikiSearch = wikisearch.findName;
     $scope.findInfo =  findinfo;
+    var curDown = false;
+    var curXPos = 0;
     $scope.addPerson = function(){
     	$scope.findInfo.addPerson(wikisearch.currentName);
     };

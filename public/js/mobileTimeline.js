@@ -5,7 +5,6 @@ angular.module('timeLineApp')
       restrict: 'EA',
       controller: function ($scope, $attrs, findinfo) {
       	$scope.mainLine = findinfo.mainLine;
-      	console.log("small")
       }
     };
   });
